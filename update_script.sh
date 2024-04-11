@@ -3,6 +3,7 @@ curl -o temp.txt https://anti-ad.net/adguard.txt && mv temp.txt ant-ad-easylist.
 curl -o temp.txt https://raw.githubusercontent.com/sbwml/halflife-list/master/ad.txt && mv temp.txt Halflife-List.txt
 curl -o temp.txt https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt && mv temp.txt xinggsf.txt
 git add .
-timestamp=$(date +%s)
+timestamp=$(date +"%Y%m%d%H%M")
 git commit -m "Update At $timestamp"
 git pull
+git push
